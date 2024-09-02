@@ -1,0 +1,55 @@
+<!-- // getComputedStyle or getPropertyValue jo ki dono css ka andhar kaam aa sakhti ha jab -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <div class="box">
+        <p class="Text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+          tenetur veritatis cumque dolorem, natus, et ab ex tempora, eligendi
+          totam sit quam? Distinctio magnam sed natus architecto magni quasi
+          impedit!
+        </p>
+
+        <button class="uc" onclick="convertToUpperCase()">upperCase</button>
+        <button class="lc" onclick="convertToLowerCase()">LowerCase</button>
+        <button class="inc" onclick="incrementText()">increment</button>
+        <button class="dec" onclick="decrementText()">decrement</button>
+        <button class="font" onclick="fontWeightChange()">weight Increase</button>
+      </div>
+
+      <script>
+           
+    let textElement = document.querySelector('.Text');
+function convertToUpperCase() {
+  textElement.textContent = textElement.textContent.toUpperCase();
+}
+
+function convertToLowerCase() {
+  textElement.textContent = textElement.textContent.toLowerCase();
+}
+
+function incrementText() {
+      let currentFontSize = parseFloat(window.getComputedStyle(textElement).getPropertyValue('font-size'));
+      textElement.style.fontSize = (currentFontSize + 1) + 'px';
+}
+
+function decrementText () {
+  let currentFontSize = parseFloat(window.getComputedStyle(textElement).fontSize);
+  textElement.style.fontSize = (currentFontSize - 1) + 'px';
+}
+
+function fontWeightChange () {
+  var currentWeight = window.getComputedStyle(textElement).fontWeight;
+  var newWeight = parseInt(currentWeight) + 100;
+  textElement.style.fontWeight = newWeight;
+}
+      </script>
+  </body>
+</html>

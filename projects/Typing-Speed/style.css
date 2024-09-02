@@ -1,0 +1,133 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0C0C0C;
+  color: #F2F2F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.wrapper {
+  background-color: #1B1B1B;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  background-color: #292929;
+  color: #F2F2F2;
+}
+
+.input-field:focus {
+  outline: none;
+  border: 2px solid #F2613F;
+}
+
+.content-box {
+  margin-bottom: 20px;
+}
+
+.typing-text {
+  margin-bottom: 20px;
+}
+
+.typing-text p {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #292929;
+  padding: 10px;
+  border-radius: 6px;
+  min-height: 60px;
+}
+
+.typing-text p span {
+  font-size: 18px;
+  margin-right: 2px;
+}
+
+.typing-text p span.correct {
+  color: #4CAF50;
+}
+
+.typing-text p span.incorrect {
+  color: #F2613F;
+}
+
+.result-details {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.result-details li {
+  text-align: center;
+}
+
+.result-details li p {
+  margin-bottom: 5px;
+}
+
+#start-btn, #try-again-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  background-color: #9B3922;
+  color: #F2F2F2;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#set-time {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  background-color: #292929;
+  color: #F2F2F2;
+}
+
+#start-btn:hover, #try-again-btn:hover {
+  background-color: #F2613F;
+}
+
+.info {
+  text-align: center;
+}
+
+.info p {
+  margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .result-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .result-details li {
+    margin-bottom: 10px;
+  }
+}

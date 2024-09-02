@@ -1,0 +1,49 @@
+
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    border: 2px solid black;
+    padding: 0.6rem;
+    border-radius: 2rem;
+    width: 10rem;
+    /* margin-top: 3rem; */
+    margin: 3rem auto; 
+    text-align: center; 
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    /* padding: 3rem; */
+}
+
+button {
+    border-radius: 2rem;
+    padding: 0.8rem;
+    width: 15rem;
+    cursor: pointer;
+}
+
+.log , .state {
+    width: 500px;
+    height: 50px;
+    border: 2px solid black;
+    padding: 0.4rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    font-size: 20px;
+    text-align: center;
+}
+
+.log {
+    background-color: orange;
+}
+
+.state {
+    background-color: orangered;
+}

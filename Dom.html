@@ -1,0 +1,89 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+
+
+</head>
+<body>
+
+    <div id="loc">
+
+    </div>
+
+    <div class="myDiv" style="height: 100px; width: 100px;
+    background-color: aqua; border: 10px black;" onmouseover="mouseClick()"></div>
+    <button onclick="changeColor()">Change Color</button>
+
+</body>
+ <script>
+
+    let loc = document.getElementById('loc')
+
+    // loc.innerHTML = window.location.href;
+    // loc.innerHTML = window.location.protocol;
+    loc.innerHTML = window.location.hostname;
+    // loc.innerHTML = window.location.assign("https://www.bing.com/search?pglt=41&q=instagram&cvid=c4165c13b7914f3189adf14fb80682ef&gs_lcrp=EgZjaHJvbWUqBggAEC4YQDIGCAAQLhhAMgYIARBFGDkyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxAFGEAyBggIEEUYPdIBCDIxMDVqMGoxqAIIsAIB&FORM=ANNTA1&PC=HCTS");
+
+    document.body.style.backgroundColor = 'red'
+
+    // document.querySelector('li') // li ko select kar liya 
+    // previousElementSibling :-> all sibling ko add kar laga jab center ma ho
+    // jab doo same name ka class ha too hum for each ka use karka karanga
+    
+
+    //replace list :-> 
+    //const list =  document.querySeleector('ul');
+    // const childToChange = list.children[1];
+    // const newLi = document.createElement('li');
+    // list.replaceChild (newLi , childToChange);
+
+    // pop Up :->
+    // alert('hello');
+    //prompt ('hello how are you" , " fine');
+    //confirm('Are you 18 Plus');
+
+    // parentElement :-> jab bhi parent ma kuch bhi nhi hota ha too null print karta ha 
+    // let parent = document.querySelector('ul');
+    // let p =   parent.parentElement;
+    // console.log(p);
+
+    //parentNode :=>  jab bhi kuch bhi parent nhi hota ha too bhi yaha kuch na to kuch print karta ha 
+    //let parent  = document.querySelector('ul');
+    // let a = document.parentNode;
+    // console.log(a);
+
+    // onclick :=>
+
+    function changeColor () {
+        let div = document.querySelector('.myDiv')
+        div.style.backgroundColor = 'green'
+    }
+
+    // MouseEvent :=> mouse over & out :-> mouse out mean jaisa hi mouse ko remove karanga to  color change ho jayaga
+    function mouseClick () {
+        let div = document.querySelector('.myDiv')
+        div.style.backgroundColor = "blue"
+    }
+
+    //mouse up and down:-> onMouseDown / onMouseUp
+
+    //previousElementsibling vs previousSibling
+
+//   previosSibling :=>  // li ka andhar tex hota ha too vo bhi select kar lata ha ex :-> <li>Hello</li> dsvs <li>Kaisa Ho</li>
+    //or opposite of previousSibling
+
+    //nextSibling :=> nextSibling ka use next Element ko Select karta ha 
+
+    //insetAdjacementHTML('afterbegin',)
+    //afterend , beforebegin , beforeend
+
+    
+
+
+ </script>
+</html>
